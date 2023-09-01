@@ -1,5 +1,5 @@
 # Projeto de Avaliação
-## Laboratório de Teste e Design de Software
+## Laboratório de Desenho e Teste de Software
 ### 1º Semetre, 2º ano, 2022/2023
 
 <p align="center">
