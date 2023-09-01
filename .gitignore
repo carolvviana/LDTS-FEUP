@@ -1,0 +1,12 @@
+# Default ignored files
+/shelf/
+/.idea/workspace.xml
+out/
+.idea/
+*.iml
+.gradle
+build/
+gradle/
+gradlew.bat
+gradlew
+.jqwik-database

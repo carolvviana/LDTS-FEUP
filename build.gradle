@@ -1,0 +1,45 @@
+plugins {
+    id 'java'
+    id 'application'
+    id 'info.solidsoft.pitest' version '1.9.0'
+    id("net.ltgt.errorprone") version "2.0.0"
+}
+
+group 'edu.ldts23.t08gr06'
+version '1.0'
+
+repositories {
+    mavenCentral()
+}
+
+pitest {
+    targetClasses = ['edu.ldts23.t08gr06.*']
+    junit5PluginVersion = '1.0.0'
+
+}
+
+application {
+    mainClass.set('edu.ldts23.t08gr06.Game')
+}
+
+dependencies {
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.9.0'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine'
+    testImplementation 'org.mockito:mockito-core:3.7.7'
+    testImplementation 'net.jqwik:jqwik:1.7.1'
+
+    implementation group: 'com.googlecode.lanterna', name: 'lanterna', version: '3.1.1'
+    errorprone("com.google.errorprone:error_prone_core:2.3.3")
+    errorproneJavac("com.google.errorprone:javac:9+181-r4173-1")
+}
+
+test {
+    useJUnitPlatform {
+        includeEngines('junit-jupiter', 'jqwik')
+    }
+}
+
+tasks.withType(JavaCompile).configureEach{
+    options.errorprone.disableWarningsInGeneratedCode = true
+    options.errorprone.enabled = true
+}
