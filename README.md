@@ -1,6 +1,6 @@
 # Projeto de Avaliação
 ## Laboratório de Desenho e Teste de Software
-### 1º Semetre, 2º ano, 2022/2023
+### 2º ano, 1º Semestre, 2022/2023
 
 <p align="center">
 <img src="docs/Pictures/LogoB.png"/>
